@@ -86,7 +86,6 @@ func NewClient() (*Client, error) {
 				hostSessionToken),
 			Region: aws.String(region),
 		}
-		a.EC2 = ec2.New(session.New(c))
 		a.CloudFormation = cloudformation.New(session.New(c))
 	}
 
