@@ -2,6 +2,28 @@
 
 
 [[projects]]
+  name = "github.com/Azure/azure-sdk-for-go"
+  packages = [
+    "services/compute/mgmt/2018-04-01/compute",
+    "version"
+  ]
+  revision = "fad8443a79b0e755c18c3bec29a8d2bedab0b421"
+  version = "v15.3.0"
+
+[[projects]]
+  name = "github.com/Azure/go-autorest"
+  packages = [
+    "autorest",
+    "autorest/adal",
+    "autorest/azure",
+    "autorest/date",
+    "autorest/to",
+    "autorest/validation"
+  ]
+  revision = "f04d503958a4fe854c1b41667c73f8813c9dd9c3"
+  version = "v10.11.2"
+
+[[projects]]
   name = "github.com/aws/aws-sdk-go"
   packages = [
     "aws",
@@ -37,6 +59,18 @@
   version = "v1.13.37"
 
 [[projects]]
+  name = "github.com/dgrijalva/jwt-go"
+  packages = ["."]
+  revision = "06ea1031745cb8b3dab3f6a236daf2b0aa468b7e"
+  version = "v3.2.0"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/giantswarm/microerror"
+  packages = ["."]
+  revision = "325932fa68e70dd4464598f11e2f710ac1aaec46"
+
+[[projects]]
   name = "github.com/go-ini/ini"
   packages = ["."]
   revision = "6529cf7c58879c08d927016dde4477f18a0634cb"
@@ -47,9 +81,15 @@
   packages = ["."]
   revision = "0b12d6b5"
 
+[[projects]]
+  branch = "master"
+  name = "github.com/juju/errgo"
+  packages = ["."]
+  revision = "08cceb5d0b5331634b9826762a8fd53b29b86ad8"
+
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "561749567051f65220cb9bb32e543216d10e9402f878d8da9d1992a26ca67c1e"
+  inputs-digest = "030f34401ee9a076ab594706103cb2da55634ad4203139e679dc3b07411ae9e4"
   solver-name = "gps-cdcl"
   solver-version = 1
