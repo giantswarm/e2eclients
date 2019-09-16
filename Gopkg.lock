@@ -2,21 +2,18 @@
 
 
 [[projects]]
-  name = "contrib.go.opencensus.io/exporter/ocagent"
-  packages = ["."]
-  revision = "00af367e65149ff1f2f4b93bbfbb84fd9297170d"
-  version = "v0.2.0"
-
-[[projects]]
+  digest = "1:3021739d02d71f90b98e725e7ae3583ab984db9d84aa11e8f6ba59d4a9aa3619"
   name = "github.com/Azure/azure-sdk-for-go"
   packages = [
     "services/compute/mgmt/2018-06-01/compute",
-    "version"
+    "version",
   ]
-  revision = "da91af54816b4cf72949c225a2d0980f51fab01b"
-  version = "v21.3.0"
+  pruneopts = "UT"
+  revision = "7577651eb4127da06c3cb42126e22d70ad974b12"
+  version = "v33.2.0"
 
 [[projects]]
+  digest = "1:78df7dcd6d2a3e38b9fc52a47129135bdfaf1f89e8dd07001968455459666b11"
   name = "github.com/Azure/go-autorest"
   packages = [
     "autorest",
@@ -26,12 +23,14 @@
     "autorest/to",
     "autorest/validation",
     "logger",
-    "tracing"
+    "tracing",
   ]
-  revision = "be17756531f50014397912b7aa557ec335e39b98"
-  version = "v11.3.0"
+  pruneopts = "UT"
+  revision = "69b4126ece6b5257e2f9b0017007d2334153655f"
+  version = "v13.0.1"
 
 [[projects]]
+  digest = "1:7b110591ce8ca4f6de189129c5dcd9bcd7525fa4ccc51be617fcdd77a83312c3"
   name = "github.com/aws/aws-sdk-go"
   packages = [
     "aws",
@@ -62,186 +61,65 @@
     "private/protocol/xml/xmlutil",
     "service/cloudformation",
     "service/ec2",
-    "service/sts"
+    "service/sts",
   ]
+  pruneopts = "UT"
   revision = "2fa5290a6a8f6a664f2dab5337d5f64d0cfd8f68"
   version = "v1.14.7"
 
 [[projects]]
-  name = "github.com/census-instrumentation/opencensus-proto"
-  packages = [
-    "gen-go/agent/common/v1",
-    "gen-go/agent/trace/v1",
-    "gen-go/resource/v1",
-    "gen-go/trace/v1"
-  ]
-  revision = "7f2434bc10da710debe5c4315ed6d4df454b4024"
-  version = "v0.1.0"
-
-[[projects]]
+  digest = "1:76dc72490af7174349349838f2fe118996381b31ea83243812a97e5a0fd5ed55"
   name = "github.com/dgrijalva/jwt-go"
   packages = ["."]
+  pruneopts = "UT"
   revision = "06ea1031745cb8b3dab3f6a236daf2b0aa468b7e"
   version = "v3.2.0"
 
 [[projects]]
   branch = "master"
+  digest = "1:f7ae60209ba785a98a5b27ed43ec9778f74e6c7623b5ff3d86f900f66c86fac1"
   name = "github.com/giantswarm/microerror"
   packages = ["."]
+  pruneopts = "UT"
   revision = "3bc3cb1a36700aa4bbfcf6c335bc2ab92ad66d8d"
 
 [[projects]]
+  digest = "1:8b4bb15de2e698d359eeec15c42453567c98972a70c8619946050360ec02ec32"
   name = "github.com/go-ini/ini"
   packages = ["."]
+  pruneopts = "UT"
   revision = "6ed8d5f64cd79a498d1f3fab5880cc376ce41bbe"
   version = "v1.41.0"
 
 [[projects]]
-  name = "github.com/golang/protobuf"
-  packages = [
-    "proto",
-    "ptypes",
-    "ptypes/any",
-    "ptypes/duration",
-    "ptypes/timestamp",
-    "ptypes/wrappers"
-  ]
-  revision = "aa810b61a9c79d51363740d207bb46cf8e620ed5"
-  version = "v1.2.0"
-
-[[projects]]
+  digest = "1:e22af8c7518e1eab6f2eab2b7d7558927f816262586cd6ed9f349c97a6c285c4"
   name = "github.com/jmespath/go-jmespath"
   packages = ["."]
+  pruneopts = "UT"
   revision = "0b12d6b5"
 
 [[projects]]
   branch = "master"
+  digest = "1:926b6084b81f49359f67e48ef8b74f33ea8509afe8410d3b34789eaea02da898"
   name = "github.com/juju/errgo"
   packages = ["."]
+  pruneopts = "UT"
   revision = "08cceb5d0b5331634b9826762a8fd53b29b86ad8"
-
-[[projects]]
-  name = "go.opencensus.io"
-  packages = [
-    ".",
-    "exemplar",
-    "internal",
-    "internal/tagencoding",
-    "plugin/ochttp",
-    "plugin/ochttp/propagation/b3",
-    "plugin/ochttp/propagation/tracecontext",
-    "stats",
-    "stats/internal",
-    "stats/view",
-    "tag",
-    "trace",
-    "trace/internal",
-    "trace/propagation",
-    "trace/tracestate"
-  ]
-  revision = "b7bf3cdb64150a8c8c53b769fdeb2ba581bd4d4b"
-  version = "v0.18.0"
-
-[[projects]]
-  branch = "master"
-  name = "golang.org/x/net"
-  packages = [
-    "context",
-    "http/httpguts",
-    "http2",
-    "http2/hpack",
-    "idna",
-    "internal/timeseries",
-    "trace"
-  ]
-  revision = "915654e7eabcea33ae277abbecf52f0d8b7a9fdc"
-
-[[projects]]
-  branch = "master"
-  name = "golang.org/x/sync"
-  packages = ["semaphore"]
-  revision = "37e7f081c4d4c64e13b10787722085407fe5d15f"
-
-[[projects]]
-  branch = "master"
-  name = "golang.org/x/sys"
-  packages = ["unix"]
-  revision = "a457fd036447854c0c02e89ea439481bdcf941a2"
-
-[[projects]]
-  name = "golang.org/x/text"
-  packages = [
-    "collate",
-    "collate/build",
-    "internal/colltab",
-    "internal/gen",
-    "internal/tag",
-    "internal/triegen",
-    "internal/ucd",
-    "language",
-    "secure/bidirule",
-    "transform",
-    "unicode/bidi",
-    "unicode/cldr",
-    "unicode/norm",
-    "unicode/rangetable"
-  ]
-  revision = "f21a4dfb5e38f5895301dc265a8def02365cc3d0"
-  version = "v0.3.0"
-
-[[projects]]
-  name = "google.golang.org/api"
-  packages = ["support/bundler"]
-  revision = "19e022d8cf43ce81f046bae8cc18c5397cc7732f"
-  version = "v0.1.0"
-
-[[projects]]
-  branch = "master"
-  name = "google.golang.org/genproto"
-  packages = ["googleapis/rpc/status"]
-  revision = "db91494dd46c1fdcbbde05e5ff5eb56df8f7d79a"
-
-[[projects]]
-  name = "google.golang.org/grpc"
-  packages = [
-    ".",
-    "balancer",
-    "balancer/base",
-    "balancer/roundrobin",
-    "binarylog/grpc_binarylog_v1",
-    "codes",
-    "connectivity",
-    "credentials",
-    "credentials/internal",
-    "encoding",
-    "encoding/proto",
-    "grpclog",
-    "internal",
-    "internal/backoff",
-    "internal/binarylog",
-    "internal/channelz",
-    "internal/envconfig",
-    "internal/grpcrand",
-    "internal/grpcsync",
-    "internal/syscall",
-    "internal/transport",
-    "keepalive",
-    "metadata",
-    "naming",
-    "peer",
-    "resolver",
-    "resolver/dns",
-    "resolver/passthrough",
-    "stats",
-    "status",
-    "tap"
-  ]
-  revision = "df014850f6dee74ba2fc94874043a9f3f75fbfd8"
-  version = "v1.17.0"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "9a4bb8c4abd69176b7ef81eed677aca3243ba166a40fd16665a4a047724aa3a5"
+  input-imports = [
+    "github.com/Azure/azure-sdk-for-go/services/compute/mgmt/2018-06-01/compute",
+    "github.com/Azure/go-autorest/autorest",
+    "github.com/Azure/go-autorest/autorest/adal",
+    "github.com/Azure/go-autorest/autorest/azure",
+    "github.com/aws/aws-sdk-go/aws",
+    "github.com/aws/aws-sdk-go/aws/credentials",
+    "github.com/aws/aws-sdk-go/aws/session",
+    "github.com/aws/aws-sdk-go/service/cloudformation",
+    "github.com/aws/aws-sdk-go/service/ec2",
+    "github.com/giantswarm/microerror",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1
