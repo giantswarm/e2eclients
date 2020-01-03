@@ -30,7 +30,7 @@
   version = "v13.0.1"
 
 [[projects]]
-  digest = "1:7b110591ce8ca4f6de189129c5dcd9bcd7525fa4ccc51be617fcdd77a83312c3"
+  digest = "1:a2fc8ed3a0ef47b242cc78656335b5fd541f0f19070c2382d124361d789cc854"
   name = "github.com/aws/aws-sdk-go"
   packages = [
     "aws",
@@ -55,12 +55,16 @@
     "internal/shareddefaults",
     "private/protocol",
     "private/protocol/ec2query",
+    "private/protocol/eventstream",
+    "private/protocol/eventstream/eventstreamapi",
     "private/protocol/query",
     "private/protocol/query/queryutil",
     "private/protocol/rest",
+    "private/protocol/restxml",
     "private/protocol/xml/xmlutil",
     "service/cloudformation",
     "service/ec2",
+    "service/s3",
     "service/sts",
   ]
   pruneopts = "UT"
@@ -119,6 +123,7 @@
     "github.com/aws/aws-sdk-go/aws/session",
     "github.com/aws/aws-sdk-go/service/cloudformation",
     "github.com/aws/aws-sdk-go/service/ec2",
+    "github.com/aws/aws-sdk-go/service/s3",
     "github.com/giantswarm/microerror",
   ]
   solver-name = "gps-cdcl"
