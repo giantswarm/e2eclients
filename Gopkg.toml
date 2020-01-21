@@ -32,7 +32,7 @@
 
 [[constraint]]
   name = "github.com/Azure/azure-sdk-for-go"
-  version = "=v33.2.0"
+  version = "=v38.2.0"
 
 [[constraint]]
   branch = "master"
