@@ -2,10 +2,12 @@
 
 
 [[projects]]
-  digest = "1:f81a8a800f4f8f60f25295133b810c63e95670db7fc60c7de790b6977f056e0c"
+  digest = "1:a8bd41abb0375a91cbc5700c5741c04ec16ee7842925f20604c3f72b2c18ca54"
   name = "github.com/Azure/azure-sdk-for-go"
   packages = [
     "services/compute/mgmt/2018-06-01/compute",
+    "services/network/mgmt/2018-06-01/network",
+    "services/resources/mgmt/2017-05-10/resources",
     "version",
   ]
   pruneopts = "UT"
@@ -111,6 +113,8 @@
   analyzer-version = 1
   input-imports = [
     "github.com/Azure/azure-sdk-for-go/services/compute/mgmt/2018-06-01/compute",
+    "github.com/Azure/azure-sdk-for-go/services/network/mgmt/2018-06-01/network",
+    "github.com/Azure/azure-sdk-for-go/services/resources/mgmt/2017-05-10/resources",
     "github.com/Azure/go-autorest/autorest",
     "github.com/Azure/go-autorest/autorest/adal",
     "github.com/Azure/go-autorest/autorest/azure",
