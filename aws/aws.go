@@ -13,11 +13,11 @@ import (
 
 const (
 	envVarGuestAccessKeyID     = "GUEST_AWS_ACCESS_KEY_ID"
-	envVarGuestSecretAccessKey = "GUEST_AWS_SECRET_ACCESS_KEY"
-	envVarGuestSessionToken    = "GUEST_AWS_SESSION_TOKEN"
+	envVarGuestSecretAccessKey = "GUEST_AWS_SECRET_ACCESS_KEY" // nolint:gosec
+	envVarGuestSessionToken    = "GUEST_AWS_SESSION_TOKEN"     // nolint:gosec
 	envVarHostAccessKeyID      = "HOST_AWS_ACCESS_KEY_ID"
-	envVarHostSecretAccessKey  = "HOST_AWS_SECRET_ACCESS_KEY"
-	envVarHostSessionToken     = "HOST_AWS_SESSION_TOKEN"
+	envVarHostSecretAccessKey  = "HOST_AWS_SECRET_ACCESS_KEY" // nolint:gosec
+	envVarHostSessionToken     = "HOST_AWS_SESSION_TOKEN"     // nolint:gosec
 	envVarRegion               = "AWS_REGION"
 )
 
@@ -65,7 +65,12 @@ func NewClient() (*Client, error) {
 				guestSessionToken),
 			Region: aws.String(region),
 		}
-		a.EC2 = ec2.New(session.New(c))
+		s, err := session.NewSession(c)
+		if err != nil {
+			return nil, microerror.Mask(err)
+		}
+
+		a.EC2 = ec2.New(s)
 	}
 
 	{
@@ -87,7 +92,12 @@ func NewClient() (*Client, error) {
 				hostSessionToken),
 			Region: aws.String(region),
 		}
-		a.CloudFormation = cloudformation.New(session.New(c))
+		s, err := session.NewSession(c)
+		if err != nil {
+			return nil, microerror.Mask(err)
+		}
+
+		a.CloudFormation = cloudformation.New(s)
 	}
 
 	return a, nil

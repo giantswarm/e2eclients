@@ -14,7 +14,7 @@ import (
 
 const (
 	envVarAzureClientID       = "AZURE_CLIENTID"
-	envVarAzureClientSecret   = "AZURE_CLIENTSECRET"
+	envVarAzureClientSecret   = "AZURE_CLIENTSECRET" // nolint:gosec
 	envVarAzureSubscriptionID = "AZURE_SUBSCRIPTIONID"
 	envVarAzureTenantID       = "AZURE_TENANTID"
 )
